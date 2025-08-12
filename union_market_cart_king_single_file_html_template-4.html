@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Union Market Cart King — Premium Disposables: Built For The Journey</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Union Market Cart King — Premium disposable vapes for local pickup. 21+ only. Cash in hand.">
+  <style>
+    :root{
+      --charcoal:#1E1E1E;
+      --offwhite:#F4F2EE;
+      --bronze:#B08D57;
+      --muted:#9F9182;
+      --accent:#C27C46;
+      --card-bg:#FFFFFF;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial; margin:0; color:var(--charcoal); background:linear-gradient(180deg,#FBFAF8 0%, #F4F2EE 100%);} 
+    a{color:inherit; text-decoration:none}
+    .site{max-width:var(--maxw); margin:0 auto;}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 18px;background:transparent}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{font-family:Montserrat, sans-serif; letter-spacing:2px; font-weight:800; color:var(--charcoal); font-size:18px}
+    .sub{font-family:Montserrat; color:var(--muted); font-size:12px; margin-top:2px}
+
+    .nav{display:flex; gap:18px; align-items:center}
+    .nav a{font-weight:600; color:var(--charcoal); font-size:14px}
+
+    /* HERO */
+    .hero{display:flex;gap:36px; align-items:center; padding:40px 18px 56px}
+    .hero-left{flex:1;}
+    .hero-right{flex:1; display:flex; justify-content:center}
+
+    .eyebrow{font-family:Montserrat; color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase}
+    h1{font-family:Montserrat; font-size:44px; margin:6px 0 10px; letter-spacing:1px}
+    p.lead{color:var(--muted); max-width:560px; line-height:1.6}
+
+    .cta-row{margin-top:20px; display:flex; gap:12px; align-items:center}
+    .btn{padding:12px 18px; border-radius:8px; font-weight:700; cursor:pointer}
+    .btn-primary{background:var(--bronze); color:var(--offwhite); border:none}
+    .btn-outline{border:1px solid rgba(30,30,30,0.08); background:transparent}
+
+    /* Hero image */
+    .mock-stage{width:360px; height:420px; background:linear-gradient(180deg,#2a2a2a, #252424); border-radius:6px; display:flex; align-items:flex-end; justify-content:center; padding:28px}
+    .mock-stage img{width:78%; max-width:150px}
+
+    /* PRODUCTS */
+    .products{padding:24px 18px 60px}
+    .products-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px}
+
+    .card{background:var(--card-bg); border-radius:8px; padding:18px; box-shadow:0 6px 18px rgba(30,30,30,0.06); border:1px solid rgba(30,30,30,0.03); display:flex; flex-direction:column; align-items:stretch}
+    .card img{height:160px; object-fit:contain; width:100%; margin-bottom:12px}
+    .tag{font-family:Montserrat; font-size:12px; color:var(--muted); letter-spacing:0.6px}
+    .product-title{font-weight:700; margin:6px 0 2px}
+    .meta{font-size:13px; color:var(--muted); margin-bottom:10px}
+    .price{font-weight:800; font-size:18px; margin-bottom:12px}
+    .request{margin-top:auto}
+
+    footer{padding:26px 18px; color:var(--muted); font-size:13px; border-top:1px solid rgba(30,30,30,0.04); display:flex; justify-content:space-between}
+
+    /* Age gate modal */
+    .modal-backdrop{position:fixed; inset:0; background:rgba(10,10,10,0.6); display:flex; align-items:center; justify-content:center; z-index:9999}
+    .modal{background:var(--offwhite); padding:28px; border-radius:10px; width:420px; box-shadow:0 10px 40px rgba(0,0,0,0.35); text-align:center}
+    .modal h3{margin:0 0 6px; font-family:Montserrat}
+    .modal p{color:var(--muted); margin-bottom:18px}
+    .modal .age-row{display:flex; gap:12px; justify-content:center}
+    .small{font-size:12px; color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{flex-direction:column-reverse;padding-bottom:18px}
+      .mock-stage{width:260px;height:320px}
+      h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div>
+          <div class="logo">UNION MARKET</div>
+          <div class="sub">CART KING</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="eyebrow">Premium Disposable Vapes</div>
+          <h1>Premium Disposables: Built For The Journey</h1>
+          <p class="lead">Rugged wellness — curated disposables with clean flavor profiles and reliable performance. Local pickup only. 21+.</p>
+          <div class="cta-row">
+            <button class="btn btn-primary" id="browseBtn">Browse Selection</button>
+            <button class="btn btn-outline" id="howBtn">How it works</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="mock-stage">
+            <img src="images/hero-vape.png" alt="union market vape">
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <h2 style="margin:0;font-family:Montserrat;letter-spacing:1px">Disposable Vapes</h2>
+          <div class="small">Local pickup · Cash only · 21+</div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+          <article class="card">
+            <img src="images/product-1.jpg" alt="Pineapple Express">
+            <div class="tag">Hybrid</div>
+            <div class="product-title">Pineapple Express</div>
+            <div class="meta">85% THC · Fruity, energetic</div>
+            <div class="price">$40</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Pineapple Express')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/product-2.jpg" alt="OG Kush">
+            <div class="tag">Indica</div>
+            <div class="product-title">OG Kush</div>
+            <div class="meta">90% THC · Relaxed, heavy</div>
+            <div class="price">$40</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('OG Kush')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/product-3.jpg" alt="Watermelon Zkittlez">
+            <div class="tag">Indica</div>
+            <div class="product-title">Watermelon Zkittlez</div>
+            <div class="meta">88% THC · Sweet, calming</div>
+            <div class="price">$40</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Watermelon Zkittlez')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/product-4.jpg" alt="Durban Poison">
+            <div class="tag">Sativa</div>
+            <div class="product-title">Durban Poison</div>
+            <div class="meta">82% THC · Focused, uplift</div>
+            <div class="price">$40</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Durban Poison')">Request to Buy</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="about" style="padding:20px 18px;">
+        <div style="max-width:720px">
+          <h3 style="font-family:Montserrat; margin-bottom:6px">About Union Market Cart King</h3>
+          <p style="color:var(--muted)">Born from a local market ethic, Union Market Cart King curates rugged, reliable disposable vapes for folks who value consistency and quality. We operate locally and meet buyers in person for pickup; cash only. We prioritize clear product info and safety.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="padding:18px">
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+          <div style="flex:1;min-width:240px">
+            <h4 style="margin:0 0 8px">Contact & Order</h4>
+            <p class="small">Send a request with the product name and quantity. Reply time is typically within a few hours during local hours.</p>
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <a class="btn btn-primary" href="#" id="messageBtn">Message on WhatsApp</a>
+              <a class="btn btn-outline" id="mailtoBtn">Send Email</a>
+            </div>
+          </div>
+
+          <div style="flex:1;min-width:240px">
+            <div style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06)">
+              <form id="requestForm" onsubmit="event.preventDefault(); submitForm();">
+                <label class="small">Product</label>
+                <input id="prodInput" name="product" required placeholder="Product name" style="width:100%;padding:10px;margin:6px 0;border:1px solid #e7e7e7;border-radius:6px">
+                <label class="small">Quantity</label>
+                <input id="qtyInput" name="quantity" required placeholder="1" style="width:100%;padding:10px;margin:6px 0;border:1px solid #e7e7e7;border-radius:6px">
+                <label class="small">Phone (optional)</label>
+                <input id="phoneInput" name="phone" placeholder="(123) 456-7890" style="width:100%;padding:10px;margin:6px 0;border:1px solid #e7e7e7;border-radius:6px">
+                <div style="margin-top:8px;display:flex;gap:8px">
+                  <button class="btn btn-primary" type="submit">Send Request</button>
+                  <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+                </div>
+                <div id="formNote" class="small" style="margin-top:10px;color:var(--muted)"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Union Market Cart King</div>
+      <div>21+ · Local pickup only · Cash in hand</div>
+    </footer>
+  </div>
+
+  <!-- AGE GATE -->
+  <div id="ageModal" class="modal-backdrop" style="display:none">
+    <div class="modal">
+      <h3>21+ Entry Required</h3>
+      <p>By entering you confirm you are 21 or older and agree to local pickup terms.</p>
+      <div class="age-row">
+        <button class="btn btn-primary" id="enterBtn">I am 21+</button>
+        <button class="btn btn-outline" id="leaveBtn">Leave</button>
+      </div>
+      <p class="small" style="margin-top:12px">We verify age at pickup. Do not proceed if you are underage.</p>
+    </div>
+  </div>
+
+  <script>
+    // Configuration: update these with your contact links
+    const MAILTO_LINK = 'mailto:youremail@example.com?subject=Union%20Market%20Order&body=Hi%2C%0A%0AI%20would%20like%20to%20order%3A%20%0A%0AProduct%3A%20%0AQuantity%3A%20%0A%0AThanks.';
+    // Example WhatsApp deep link format: https://wa.me/15551234567?text=Hello
+    const MESSAGE_LINK = 'https://wa.me/15555555555?text=Hi%20I%27d%20like%20to%20request%20a%20product.';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Age gate handling
+    const ageModal = document.getElementById('ageModal');
+    const entered = localStorage.getItem('umck_age_ok');
+    if (!entered) {
+      ageModal.style.display = 'flex';
+    }
+    document.getElementById('enterBtn').onclick = function(){
+      localStorage.setItem('umck_age_ok', '1');
+      ageModal.style.display = 'none';
+    }
+    document.getElementById('leaveBtn').onclick = function(){
+      window.location.href = 'about:blank';
+    }
+
+    // Buttons
+    document.getElementById('browseBtn').onclick = () => { location.hash = '#products'; window.scrollTo({top:document.getElementById('products').offsetTop - 10, behavior:'smooth'}); }
+    document.getElementById('howBtn').onclick = () => { alert('Browse, request via message or the form, meet locally and pay cash.'); }
+
+    document.getElementById('messageBtn').href = MESSAGE_LINK;
+    document.getElementById('mailtoBtn').onclick = () => { window.location.href = MAILTO_LINK; };
+
+    function requestBuy(product) {
+      // prefill form and scroll to contact
+      document.getElementById('prodInput').value = product;
+      location.hash = '#contact';
+      window.scrollTo({top:document.getElementById('contact').offsetTop - 10, behavior:'smooth'});
+    }
+
+    function clearForm(){ document.getElementById('requestForm').reset(); document.getElementById('formNote').textContent = ''; }
+
+    function submitForm(){
+      const p = document.getElementById('prodInput').value.trim();
+      const q = document.getElementById('qtyInput').value.trim();
+      const ph = document.getElementById('phoneInput').value.trim();
+      if(!p || !q) { document.getElementById('formNote').textContent = 'Please add product and quantity.'; return; }
+
+      // send via mailto fallback
+      const subject = encodeURIComponent('Order request: ' + p);
+      const body = encodeURIComponent('Hi,%0A%0AI would like to request:%0AProduct: ' + p + '%0AQuantity: ' + q + '%0APhone: ' + ph + '%0A%0AThanks.');
+      window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+
+      document.getElementById('formNote').textContent = 'Opening your email client to send the request...';
+    }
+
+  </script>
+</body>
+</html>
