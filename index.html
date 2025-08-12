@@ -178,7 +178,7 @@
           </article>
 
           <article class="card">
-            <<div class="deal-badge">BUY 4, GET 1</div>
+            <div class="deal-badge">BUY 4, GET 1</div>
             <img src="images/product-5.jpg" alt="Cotton Candy">
             <div class="tag">Hybrid</div>
             <div class="product-title">Cotton Candy</div>
@@ -300,10 +300,9 @@
   </div>
 
   <script>
-    // Configuration: update these with your contact links
-    const MAILTO_LINK = 'mailto:youremail@example.com?subject=Union%20Market%20Order&body=Hi%2C%0A%0AI%20would%20like%20to%20order%3A%20%0A%0AProduct%3A%20%0AQuantity%3A%20%0A%0AThanks.';
-    // Example WhatsApp deep link format: https://wa.me/15551234567?text=Hello
-    const MESSAGE_LINK = 'https://wa.me/15555555555?text=Hi%20I%27d%20like%20to%20request%20a%20product.';
+    // CONTACT: set your real links here
+    const MAILTO_LINK = 'mailto:unionmarketcartking@gmail.com?subject=Union%20Market%20Order&body=Hi%2C%0A%0AI%20would%20like%20to%20order:%0AProduct:%20%0AQuantity:%20%0A%0ADeal:%20BUY4%20(applies%20when%20buying%204)%0A%0AThanks.';
+    const MESSAGE_LINK = '#'; // e.g., 'https://wa.me/1XXXXXXXXXX?text=Hi%20I%27d%20like%20to%20order'
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -325,7 +324,8 @@
     document.getElementById('browseBtn').onclick = () => { location.hash = '#products'; window.scrollTo({top:document.getElementById('products').offsetTop - 10, behavior:'smooth'}); }
     document.getElementById('howBtn').onclick = () => { alert('Browse products, message us with your order, meet locally and pay cash. PROMO: Buy 4, Get 1 Free — mention code BUY4.'); }
 
-    document.getElementById('messageBtn').href = MESSAGE_LINK;
+    const msgBtn = document.getElementById('messageBtn');
+    if (MESSAGE_LINK && MESSAGE_LINK !== '#') { msgBtn.href = MESSAGE_LINK; } else { msgBtn.style.display = 'none'; }
     document.getElementById('mailtoBtn').onclick = () => { window.location.href = MAILTO_LINK; };
 
     function requestBuy(product) {
@@ -345,8 +345,8 @@
 
       // send via mailto fallback
       const subject = encodeURIComponent('Order request: ' + p);
-      const body = encodeURIComponent('Hi,%0A%0AI would like to request:%0AProduct: ' + p + '%0AQuantity: ' + q + '%0APhone: ' + ph + '%0A%0AThanks.');
-      window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+      const body = encodeURIComponent('Hi,%0A%0AI would like to request:%0AProduct: ' + p + '%0AQuantity: ' + q + '%0APhone: ' + ph + '%0ADeal: BUY4%0A%0AThanks.');
+      window.location.href = 'mailto:unionmarketcartking@gmail.com?subject=' + subject + '&body=' + body;
 
       document.getElementById('formNote').textContent = 'Opening your email client to send the request...';
     }
