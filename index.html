@@ -31,7 +31,7 @@
     .nav a{font-weight:600; color:var(--charcoal); font-size:14px}
 
     /* HERO */
-    .hero{display:flex;gap:36px; align-items:center; padding:40px 18px 56px}
+    .hero{display:flex;gap:36px; align-items:center; padding:24px 18px 40px}
     .hero-left{flex:1;}
     .hero-right{flex:1; display:flex; justify-content:center}
 
@@ -48,11 +48,16 @@
     .mock-stage{width:360px; height:420px; background:linear-gradient(180deg,#2a2a2a, #252424); border-radius:6px; display:flex; align-items:flex-end; justify-content:center; padding:28px}
     .mock-stage img{width:78%; max-width:150px}
 
+    /* Promo + Deal styles */
+    .promo{background:var(--bronze); color:var(--offwhite); text-align:center; padding:10px 18px; margin:0 18px 14px; border-radius:10px; font-family:Montserrat; font-weight:700}
+    .promo .small{color:var(--offwhite); opacity:0.85}
+    .deal-badge{position:absolute; top:10px; left:10px; background:rgba(176,141,87,0.95); color:var(--offwhite); font-family:Montserrat; font-weight:800; font-size:10px; letter-spacing:.6px; padding:6px 8px; border-radius:6px}
+
     /* PRODUCTS */
-    .products{padding:24px 18px 60px}
+    .products{padding:14px 18px 60px}
     .products-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px}
 
-    .card{background:var(--card-bg); border-radius:8px; padding:18px; box-shadow:0 6px 18px rgba(30,30,30,0.06); border:1px solid rgba(30,30,30,0.03); display:flex; flex-direction:column; align-items:stretch}
+    .card{background:var(--card-bg); border-radius:8px; padding:18px; box-shadow:0 6px 18px rgba(30,30,30,0.06); border:1px solid rgba(30,30,30,0.03); display:flex; flex-direction:column; align-items:stretch; position:relative}
     .card img{height:160px; object-fit:contain; width:100%; margin-bottom:12px}
     .tag{font-family:Montserrat; font-size:12px; color:var(--muted); letter-spacing:0.6px}
     .product-title{font-weight:700; margin:6px 0 2px}
@@ -88,11 +93,14 @@
         </div>
       </div>
       <nav class="nav">
+        <a href="#sale">Sale</a>
         <a href="#products">Shop</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
+    <div class="promo" id="sale">BUY 4, GET 1 FREE <span class="small">— mention code "BUY4" when you message us and we’ll add the free unit at pickup.</span></div>
 
     <main>
       <section class="hero">
@@ -122,46 +130,110 @@
         <div class="products-grid" id="productsGrid">
 
           <article class="card">
-            <img src="images/product-1.jpg" alt="Pineapple Express">
-            <div class="tag">Hybrid</div>
-            <div class="product-title">Pineapple Express</div>
-            <div class="meta">85% THC · Fruity, energetic</div>
-            <div class="price">$40</div>
-            <div class="request">
-              <button class="btn btn-primary" onclick="requestBuy('Pineapple Express')">Request to Buy</button>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="images/product-2.jpg" alt="OG Kush">
-            <div class="tag">Indica</div>
-            <div class="product-title">OG Kush</div>
-            <div class="meta">90% THC · Relaxed, heavy</div>
-            <div class="price">$40</div>
-            <div class="request">
-              <button class="btn btn-primary" onclick="requestBuy('OG Kush')">Request to Buy</button>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="images/product-3.jpg" alt="Watermelon Zkittlez">
-            <div class="tag">Indica</div>
-            <div class="product-title">Watermelon Zkittlez</div>
-            <div class="meta">88% THC · Sweet, calming</div>
-            <div class="price">$40</div>
-            <div class="request">
-              <button class="btn btn-primary" onclick="requestBuy('Watermelon Zkittlez')">Request to Buy</button>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="images/product-4.jpg" alt="Durban Poison">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-1.jpg" alt="Lemonhead Z">
             <div class="tag">Sativa</div>
-            <div class="product-title">Durban Poison</div>
-            <div class="meta">82% THC · Focused, uplift</div>
-            <div class="price">$40</div>
+            <div class="product-title">Lemonhead Z</div>
+            <div class="meta">90.3% THC · Uplifting, Creative, Active</div>
+            <div class="price">$50</div>
             <div class="request">
-              <button class="btn btn-primary" onclick="requestBuy('Durban Poison')">Request to Buy</button>
+              <button class="btn btn-primary" onclick="requestBuy('Lemonhead Z')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-2.jpg" alt="Cherry Zours">
+            <div class="tag">Hybrid</div>
+            <div class="product-title">Cherry Zours</div>
+            <div class="meta">90.2% THC · Mellow, Calming, Relaxing</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Cherry Zours')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-3.jpg" alt="Gush Mints">
+            <div class="tag">Indica</div>
+            <div class="product-title">Gush Mints</div>
+            <div class="meta">90.67% THC · Dreamy, Ethereal, Hazy</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Gush Mints')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-4.jpg" alt="Passion Guava Pop">
+            <div class="tag">Sativa</div>
+            <div class="product-title">Passion Guava Pop</div>
+            <div class="meta">89.89% THC · Giggly, Active, Heady</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Passion Guava Pop')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <<div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-5.jpg" alt="Cotton Candy">
+            <div class="tag">Hybrid</div>
+            <div class="product-title">Cotton Candy</div>
+            <div class="meta">90.5% THC · Robust, Reflective, Thoughtful</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Cotton Candy')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-6.jpg" alt="Bubblegum Gelato">
+            <div class="tag">Indica</div>
+            <div class="product-title">Bubblegum Gelato</div>
+            <div class="meta">90.93% THC · Euphoric, Soothing, Sleepy</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Bubblegum Gelato')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-7.jpg" alt="Rainbow Belts">
+            <div class="tag">Sativa</div>
+            <div class="product-title">Rainbow Belts</div>
+            <div class="meta">90.15% THC · Energetic, Appetite-Inducing, Stress-Relieving</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Rainbow Belts')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-8.jpg" alt="White Gummy">
+            <div class="tag">Hybrid</div>
+            <div class="product-title">White Gummy</div>
+            <div class="meta">90.25% THC · Soothing, Creative, Meditative</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('White Gummy')">Request to Buy</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="deal-badge">BUY 4, GET 1</div>
+            <img src="images/product-9.jpg" alt="Blue Nerds">
+            <div class="tag">Indica</div>
+            <div class="product-title">Blue Nerds</div>
+            <div class="meta">90.67% THC · Full Body, Relieves Anxiety</div>
+            <div class="price">$50</div>
+            <div class="request">
+              <button class="btn btn-primary" onclick="requestBuy('Blue Nerds')">Request to Buy</button>
             </div>
           </article>
 
@@ -251,7 +323,7 @@
 
     // Buttons
     document.getElementById('browseBtn').onclick = () => { location.hash = '#products'; window.scrollTo({top:document.getElementById('products').offsetTop - 10, behavior:'smooth'}); }
-    document.getElementById('howBtn').onclick = () => { alert('Browse, request via message or the form, meet locally and pay cash.'); }
+    document.getElementById('howBtn').onclick = () => { alert('Browse products, message us with your order, meet locally and pay cash. PROMO: Buy 4, Get 1 Free — mention code BUY4.'); }
 
     document.getElementById('messageBtn').href = MESSAGE_LINK;
     document.getElementById('mailtoBtn').onclick = () => { window.location.href = MAILTO_LINK; };
